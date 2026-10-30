@@ -11,7 +11,18 @@
       "required_capabilities": [
         "project-files"
       ],
-      "tested_on_real_project": false
+      "tested_on_real_project": false,
+      "primary_capability": "ui.visual-hierarchy",
+      "supported_scopes": [
+        "project",
+        "repository"
+      ],
+      "execution_modes": [
+        "advisory",
+        "execution",
+        "verification"
+      ],
+      "specialization_of": null
     },
     {
       "id": "microinteractions",
@@ -23,7 +34,18 @@
       "required_capabilities": [
         "project-files"
       ],
-      "tested_on_real_project": false
+      "tested_on_real_project": false,
+      "primary_capability": "ui.interaction-feedback",
+      "supported_scopes": [
+        "project",
+        "repository"
+      ],
+      "execution_modes": [
+        "advisory",
+        "execution",
+        "verification"
+      ],
+      "specialization_of": null
     },
     {
       "id": "visual-qa",
@@ -35,7 +57,18 @@
       "required_capabilities": [
         "project-files"
       ],
-      "tested_on_real_project": false
+      "tested_on_real_project": false,
+      "primary_capability": "ui.visual-verification",
+      "supported_scopes": [
+        "project",
+        "repository"
+      ],
+      "execution_modes": [
+        "advisory",
+        "execution",
+        "verification"
+      ],
+      "specialization_of": null
     }
   ]
 }

@@ -39,3 +39,6 @@ Copy `templates/skill/` into `skills/<unique-name>/`; fill out both files, add a
 
 ## Security
 Treat third-party SKILL.md and any referenced scripts as untrusted instructions. Inspect commands, credential access, network calls and dependency installation before use; scope permissions to the task and avoid automatic execution.
+
+## Utility belt curation
+Skills can support prompts, projects, or repositories. Each entry declares its supported targets and modes. Read [CURATION.md](CURATION.md) before importing third-party skills. Automatic semantic routing is not implemented.

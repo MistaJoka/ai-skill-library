@@ -12,12 +12,26 @@ except (OSError, ValueError) as exc:
     print(f"FAIL: registry.json: {exc}", file=sys.stderr)
     sys.exit(1)
 ids = set()
+owners = {}
+allowed_scopes = {"prompt", "project", "repository"}
+allowed_modes = {"advisory", "execution", "verification"}
 for entry in registry.get("skills", []):
     skill_id = entry.get("id")
     folder = root / entry.get("path", "")
     if not skill_id or skill_id in ids:
         errors.append(f"missing/duplicate skill id: {skill_id}")
     ids.add(skill_id)
+    capability = entry.get("primary_capability")
+    if not isinstance(capability, str) or not capability.strip():
+        errors.append(f"{skill_id}: missing primary_capability")
+    elif capability in owners:
+        errors.append(f"duplicate primary capability {capability}: {owners[capability]} and {skill_id}")
+    else:
+        owners[capability] = skill_id
+    for key, allowed in (("supported_scopes", allowed_scopes), ("execution_modes", allowed_modes)):
+        values = entry.get(key)
+        if not isinstance(values, list) or not values or any(v not in allowed for v in values):
+            errors.append(f"{skill_id}: invalid {key}")
     if not folder.is_dir() or folder.parent != root / "skills" or folder.name != skill_id:
         errors.append(f"invalid canonical skill path: {folder}")
         continue
