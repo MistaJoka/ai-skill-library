@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "id": "visual-design",
+      "path": "skills/visual-design",
+      "status": "initial",
+      "origin": "original",
+      "source_url": null,
+      "license": "UNSPECIFIED",
+      "required_capabilities": [
+        "project-files"
+      ],
+      "tested_on_real_project": false
+    },
+    {
+      "id": "microinteractions",
+      "path": "skills/microinteractions",
+      "status": "initial",
+      "origin": "original",
+      "source_url": null,
+      "license": "UNSPECIFIED",
+      "required_capabilities": [
+        "project-files"
+      ],
+      "tested_on_real_project": false
+    },
+    {
+      "id": "visual-qa",
+      "path": "skills/visual-qa",
+      "status": "initial",
+      "origin": "original",
+      "source_url": null,
+      "license": "UNSPECIFIED",
+      "required_capabilities": [
+        "project-files"
+      ],
+      "tested_on_real_project": false
+    }
+  ]
+}
