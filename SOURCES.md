@@ -21,3 +21,10 @@ Discovery is **not endorsement**. Evaluate individual skill licensing, security,
 6. For approved skills, require separate `SKILL.md` and `HOW_TO_USE.md`, update registry and run structural validation.
 
 Do not bulk-download and execute marketplace skills.
+
+## Upstream-first inventory policy
+- Do not import wholesale from Anthropic or OpenAI official skill collections.
+- Check the actual installed skills and built-in capabilities of Claude Code/Codex before claiming overlap.
+- Prefer links or upstream installation for unchanged skills; fork separately when maintaining meaningful modifications.
+- Add a skill to this repository only when it fills a documented gap, supplies a proven improvement, or provides a distinct portable specialization.
+- For local models, audit tool-use, context-length, file access, and instruction-following compatibility instead of assuming a skill written for a hosted coding agent will work.
